@@ -18,7 +18,7 @@ const ViewProduct = () => {
   const intialLoad = (e) => {
     axios
       .get(
-        `http://localhost:9010/api/v1/product/getsingleproduct/${id}`
+        `https://product-node-app-task.herokuapp.com/api/v1/product/getsingleproduct/${id}`
       )
       .then((response) => {
         setproduct(response.data);
@@ -31,7 +31,7 @@ const ViewProduct = () => {
     e.preventDefault();
     axios
       .put(
-        `http://localhost:9010/api/v1/product/updateproduct/${id}`,
+        `https://product-node-app-task.herokuapp.com/api/v1/product/updateproduct/${id}`,
         product
       )
       .then(() => alert('product Udated.......'))

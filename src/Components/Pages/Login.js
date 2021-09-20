@@ -32,7 +32,7 @@ const Register = () => {
     e.preventDefault();
     axios
       .post(
-        "http://localhost:9010/api/v1/auth/login",
+        "https://product-node-app-task.herokuapp.com/api/v1/auth/login",
         userdata,
       )
       .then((res) => localStorage.setItem('login', JSON.stringify(res.data.token)))

@@ -16,7 +16,7 @@ const Home = () => {
   }, []);
   const onloadData = async () => {
     await axios
-      .get("http://localhost:9010/api/v1/product/getproduct")
+      .get("https://product-node-app-task.herokuapp.com/api/v1/product/getproduct")
       .then((response) => {
         settotlen(response.data.length);
         console.log('total', response.data.length);
@@ -30,7 +30,7 @@ const Home = () => {
    const fetchUsers = async (skip) => {
 
     await axios
-      .get(`http://localhost:9010/api/v1/product/page?page=${skip}`)
+      .get(`https://product-node-app-task.herokuapp.com/api/v1/product/page?page=${skip}`)
         .then(response => {
             setpageOfItems(response.data.results);
             setlen(response.data.results.length);

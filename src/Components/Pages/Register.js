@@ -35,7 +35,7 @@ const Register = () => {
     console.log('userdata', userdata);
     axios
       .post(
-        "http://localhost:9010/api/v1/auth/register",
+        "https://product-node-app-task.herokuapp.com/api/v1/auth/register",
         userdata,
       )
       .then(() => history.push("/"))

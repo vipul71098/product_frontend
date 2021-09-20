@@ -46,7 +46,7 @@ const AddProdcut = () => {
     e.preventDefault();
     axios
       .post(
-        "http://localhost:9010/api/v1/product/insertproduct",
+        "https://product-node-app-task.herokuapp.com/api/v1/product/insertproduct",
         fd
       )
       .then(() => history.push("/home"))

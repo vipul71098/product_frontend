@@ -43,7 +43,7 @@ const Home = () => {
   const deleteblog = (id) => {
     axios
       .delete(
-        `http://localhost:9010/api/v1/product/deleteproduct/${id}`
+        `https://product-node-app-task.herokuapp.com/api/v1/product/deleteproduct/${id}`
       )
       .then((response) => {
         fetchUsers();
